@@ -1,5 +1,6 @@
 
 
+
 <!-- =========================================
      SECTION 01: SHREE MANGAL BOOKS HEADER
 ========================================= -->
@@ -18,6 +19,7 @@
       width: 100%;
       background: #fff;
       box-shadow: 0 3px 18px rgba(9,43,100,.09);
+      font-family: "DM Sans", Arial, sans-serif;
     }
 
     #smb-header *,
@@ -30,16 +32,17 @@
       text-decoration: none;
     }
 
+    /* FULL-WIDTH CONTAINER */
     #smb-header .smb-container {
-      width: min(1240px, calc(100% - 40px));
-      margin-inline: auto;
+      width: calc(100% - 48px);
+      max-width: 1600px;
+      margin: 0 auto;
     }
 
     /* TOP CONTACT BAR */
     #smb-header .smb-top {
       background: var(--smb-dark);
       color: #fff;
-      font-family: "DM Sans", sans-serif;
       font-size: 12px;
     }
 
@@ -80,8 +83,8 @@
     }
 
     #smb-header .smb-social a {
-      width: 29px;
-      height: 29px;
+      width: 36px;
+      height: 36px;
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -97,8 +100,8 @@
     }
 
     #smb-header .smb-social svg {
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
       display: block;
     }
 
@@ -112,7 +115,7 @@
       stroke-width: 2;
     }
 
-    /* MAIN NAVIGATION */
+    /* MAIN HEADER */
     #smb-header .smb-main {
       background: #fff;
     }
@@ -126,38 +129,40 @@
       position: relative;
     }
 
- #smb-header .smb-logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex: 0 0 370px;
-  min-width: 0;
-  margin: 0 auto 0 0;
-  padding: 0;
-}
+    /* LOGO: LEFT SIDE */
+    #smb-header .smb-logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 0 1 470px;
+      min-width: 0;
+      margin: 0;
+      padding: 0;
+    }
 
-#smb-header .smb-logo img {
-  display: block;
-  width: 100%;
-  max-width: 370px;
-  max-height: 82px;
-  height: auto;
-  object-fit: contain;
-  object-position: left center;
-}
-    /* NAVIGATION LINKS */
+    #smb-header .smb-logo img {
+      display: block;
+      width: 100%;
+      max-width: 470px;
+      max-height: 82px;
+      height: auto;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    /* NAVIGATION: RIGHT SIDE */
     #smb-header .smb-links {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      gap: 19px;
+      gap: 24px;
       flex: 0 0 auto;
+      margin-left: auto;
     }
 
     #smb-header .smb-links > a {
       color: var(--smb-text);
-      font-family: "DM Sans", sans-serif;
-      font-size: 12px;
+      font-size: 13px;
       line-height: 1.5;
       font-weight: 700;
       white-space: nowrap;
@@ -169,7 +174,7 @@
     }
 
     #smb-header .smb-links > .smb-nav-cta {
-      padding: 13px 16px;
+      padding: 14px 19px;
       background: var(--smb-navy);
       color: #fff;
       border-radius: 5px;
@@ -191,7 +196,7 @@
       color: #fff;
       border: 0;
       border-radius: 5px;
-      font: 700 13px "DM Sans", sans-serif;
+      font: 700 13px Arial, sans-serif;
       cursor: pointer;
       flex-shrink: 0;
     }
@@ -212,25 +217,25 @@
     }
 
     /* LAPTOP / SMALL DESKTOP */
-    @media (max-width: 1120px) {
+    @media (max-width: 1250px) {
       #smb-header .smb-nav {
         gap: 18px;
       }
 
       #smb-header .smb-logo {
-        flex-basis: 300px;
+        flex-basis: 360px;
       }
 
       #smb-header .smb-logo img {
-        max-width: 300px;
+        max-width: 360px;
       }
 
       #smb-header .smb-links {
-        gap: 12px;
+        gap: 15px;
       }
 
       #smb-header .smb-links > a {
-        font-size: 11px;
+        font-size: 12px;
       }
     }
 
@@ -256,6 +261,7 @@
 
       #smb-header .smb-menu {
         display: inline-flex;
+        margin-left: auto;
       }
 
       #smb-header .smb-links {
@@ -271,6 +277,7 @@
         flex-direction: column;
         align-items: stretch;
         gap: 0;
+        margin-left: 0;
       }
 
       #smb-header .smb-links.active {
@@ -301,6 +308,7 @@
       #smb-header .smb-top-inner {
         padding-block: 8px;
         justify-content: center;
+        flex-wrap: wrap;
         gap: 7px;
       }
 
@@ -348,7 +356,7 @@
     }
   </style>
 
-  <!-- TOP BAR -->
+  <!-- TOP CONTACT BAR -->
   <div class="smb-top">
     <div class="smb-container smb-top-inner">
 
@@ -373,7 +381,6 @@
            rel="noopener noreferrer"
            aria-label="WhatsApp"
            title="WhatsApp">
-
           <svg viewBox="0 0 24 24" class="smb-filled-icon" aria-hidden="true">
             <path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 20Z"/>
             <path d="M8.5 7.5c-.4 0-.7.3-.9.6-.3.4-.7.9-.7 1.8 0 1.1.8 2.2.9 2.4.1.2 1.7 2.6 4 3.5 2 .8 2.4.6 2.8.5.4-.1 1.4-.6 1.6-1.2.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3l-1.7-.8c-.2-.1-.4-.1-.5.2l-.8 1c-.1.1-.3.2-.5.1-.3-.1-1-.4-1.8-1.1-.7-.6-1.1-1.3-1.3-1.6-.1-.2 0-.4.1-.5l.5-.5c.1-.2.2-.3.2-.4.1-.2 0-.3 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4H8.5Z"/>
@@ -386,7 +393,6 @@
            rel="noopener noreferrer"
            aria-label="Facebook"
            title="Facebook">
-
           <svg viewBox="0 0 24 24" class="smb-filled-icon" aria-hidden="true">
             <path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.6c0-.9.3-1.6 1.6-1.6h1.7V3.1A22 22 0 0 0 14.3 3c-2.5 0-4.1 1.5-4.1 4.3v2.3H7.4v3.2h2.8V21z"/>
           </svg>
@@ -398,7 +404,6 @@
            rel="noopener noreferrer"
            aria-label="Instagram"
            title="Instagram">
-
           <svg viewBox="0 0 24 24" class="smb-outline-icon" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="5"/>
             <circle cx="12" cy="12" r="4"/>
@@ -410,22 +415,20 @@
     </div>
   </div>
 
-  <!-- MAIN HEADER -->
+  <!-- MAIN NAVIGATION -->
   <div class="smb-main">
     <div class="smb-container smb-nav">
 
-      <!-- ORIGINAL LOGO IMAGE: no duplicate text -->
+      <!-- SINGLE ORIGINAL LOGO LINK -->
       <a href="#smb-home"
          class="smb-logo"
          aria-label="Shree Mangal Books home">
-
-     <a href="./index.html" class="site-logo">
-  <img
-    src="./assets/logo.jpeg"
-    alt="Shree Mangal Book Company — Publishers and Distributor"
-    width="370"
-    height="90">
-</a>
+        <img
+          src="./assets/logo.jpeg"
+          alt="Shree Mangal Book Company — Publishers and Distributor"
+          width="470"
+          height="90">
+      </a>
 
       <!-- MOBILE MENU BUTTON -->
       <button
@@ -433,15 +436,13 @@
         type="button"
         aria-expanded="false"
         aria-controls="smb-navigation">
-
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
-
         <span>Menu</span>
       </button>
 
-      <!-- NAVIGATION -->
+      <!-- NAVIGATION LINKS -->
       <nav class="smb-links" id="smb-navigation" aria-label="Main navigation">
         <a href="#smb-home">Home</a>
         <a href="#smb-about">About Us</a>
@@ -479,9 +480,7 @@
         const open = nav.classList.toggle("active");
 
         menu.setAttribute("aria-expanded", String(open));
-
-        menu.querySelector("span").textContent =
-          open ? "Close" : "Menu";
+        menu.querySelector("span").textContent = open ? "Close" : "Menu";
 
         menu.querySelector("svg").innerHTML = open
           ? '<path d="m6 6 12 12M18 6 6 18"/>'
